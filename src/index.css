@@ -1,23 +1,30 @@
-@import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
-
+@import 'tailwindcss';
 
 @theme {
-  --color-zoho-blue: #226DB4;
+  --color-zoho-blue: #226db4;
   --color-zoho-blue-dark: #1b5a96;
   --color-zoho-blue-light: #e9f1f8;
   --color-zoho-blue-bright: #328fe7;
+  --color-zoho-gray: #404040;
+  --color-zoho-black: #000000;
 
-  --font-poppins: "Poppins", sans-serif;
-  --font-sansation: "Sansation","Poppins", sans-serif;
+  --font-poppins: 'Poppins', sans-serif;
+  --font-sansation: 'Sansation', sans-serif;
+  --font-roboto: 'Roboto', sans-serif;
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-noto-sans: 'Noto Sans', sans-serif;
 }
 
-body::-webkit-scrollbar{
- display: none;
+body::-webkit-scrollbar {
+  display: none;
 }
-body{
-  -ms-overflow-style : none;
+body {
+  -ms-overflow-style: none;
   scrollbar-width: none;
 }
