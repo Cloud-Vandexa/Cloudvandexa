@@ -74,7 +74,7 @@ export const ServicesPage = () => {
       {/* Extensive Services Breakdown */}
       <section className="py-32">
         <div className="mx-auto">
-          <div className="grid gap-x-12 gap-y-8 px-40 lg:grid-cols-2 mb-10">
+          <div className="grid gap-x-12 gap-y-8 px-20 md:px-40 lg:grid-cols-2 mb-10">
             {serviceCards.map((card) => {
               const Icon = card.icon;
               return (
@@ -83,7 +83,7 @@ export const ServicesPage = () => {
                   className="rounded-4xl text-center shadow-2xl shadow-slate-200/40"
                 >
                   <div className="flex gap-4 items-center text-lg font-montserrat mb-3">
-                    <div className="w-12 h-12 flex items-center justify-center text-zoho-blue">
+                    <div className="w-12 h-12 hidden md:flex items-center justify-center text-zoho-blue">
                       <Icon size={40} />
                     </div>
                     <h2 className=" text-black">{card.title}</h2>
@@ -105,7 +105,7 @@ export const ServicesPage = () => {
           </div>
 
           {/* Resource Augmentation Section */}
-          <div className="bg-zoho-blue-dark  py-12 px-24 text-white overflow-hidden relative mb-18">
+          <div className="bg-zoho-blue-dark  py-12 px-10 md:px-24 text-white overflow-hidden relative mb-18">
             <div className="relative z-10">
               <div className="flex flex-col lg:flex-row gap-20">
                 <div className="lg:w-1/2">
@@ -171,9 +171,9 @@ export const ServicesPage = () => {
 
           {/* Dedicated Support */}
           <div className="flex flex-col gap-12 items-center">
-            <div className=" p-16   flex flex-col items-center text-center">
+            <div className="p-10 md:p-16  flex flex-col items-center text-center">
               <div className="flex items-center gap-6">
-                <div className="w-12 h-12 bg-zoho-blue text-white rounded-full flex items-center justify-center mb-10 shadow-xl shadow-zoho-blue/20">
+                <div className="w-12 h-12 bg-zoho-blue text-white rounded-full hidden md:flex items-center justify-center mb-10 shadow-xl shadow-zoho-blue/20">
                   <HelpCircle size={40} />
                 </div>
                 <h2 className="text-2xl font-light  text-black mb-8">

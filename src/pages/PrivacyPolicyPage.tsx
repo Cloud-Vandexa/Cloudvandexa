@@ -40,7 +40,7 @@ export const PrivacyPolicyPage = () => {
           <p className="text-black">
             We may collect the following types of information:
           </p>
-          <div className="flex gap-8 lg:gap-24 mt-8">
+          <div className="flex flex-col md:flex-row gap-8 lg:gap-24 mt-8">
             <div>
               <h3 className="text-xl font-montserrat font-medium text-slate-800 mb-4">
                 Personal Information

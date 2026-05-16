@@ -17,7 +17,7 @@ export const TopBar = () => {
   const textColor = pathname === '/' ? 'text-white' : 'text-black';
 
   return (
-    <div className={`${bgColor} ${textColor} py-3  lg:block`}>
+    <div className={`${bgColor} ${textColor} py-3 hidden lg:block`}>
       <div className="max-w-7xl mx-auto px-4 flex justify-between items-center text-[13px]">
         <div className="flex items-center font-noto-sans">
           <a

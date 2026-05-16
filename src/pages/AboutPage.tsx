@@ -194,7 +194,7 @@ export const AboutPage = () => {
       {/* Vision & Promise */}
       <section className="py-12">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center px-16">
+          <div className="grid lg:grid-cols-2 gap-12 items-center px-4 md:px-16">
             <div>
               <h2 className="text-3xl font-montserrat text-center -translate-4 text-black">
                 Our Vision
