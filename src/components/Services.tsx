@@ -66,16 +66,18 @@ export const Services = () => {
           {serviceList.map((s, i) => (
             <div
               key={i}
-              className="bg-white max-w-[45vw] md:max-w-[30vw] lg:w-[20vw] flex-1 lg:flex-none flex flex-col h-full"
+              className="bg-white max-w-[80vw] md:max-w-[30vw] lg:w-[20vw] flex-1 lg:flex-none flex flex-col h-full"
             >
               <div className="flex items-center justify-center mb-6 gap-2 px-5 py-3 bg-zoho-blue font-noto-sans">
-                <div className="text-zoho-blue flex items-center justify-center rounded-xl">
+                <div className="text-zoho-blue  items-center justify-center rounded-xl hidden md:flex">
                   {React.cloneElement(s.icon as React.ReactElement, {
                     size: 20,
                     color: '#fff'
                   })}
                 </div>
-                <h3 className="text-lg  text-white text-nowrap">{s.title}</h3>
+                <h3 className="text-base lg:text-lg text-white text-nowrap">
+                  {s.title}
+                </h3>
               </div>
 
               <p className="text-black font-light text-[16px] leading-[1.8] text-justify">

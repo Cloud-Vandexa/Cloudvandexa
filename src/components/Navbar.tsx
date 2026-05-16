@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ZohoLogo } from './ZohoLogo';
+import cloud_vandexa_logo from '../assets/cloud_vandexa_logo.png';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 
 export const Navbar = () => {
@@ -19,10 +20,10 @@ export const Navbar = () => {
       className={`w-full bg-white transition-all z-50 duration-300 ${isScrolled ? 'fixed top-0 shadow-md' : 'relative'}`}
     >
       <div className="max-w-7xl mx-auto px-4 flex justify-between items-center h-28">
-        <div className="flex items-center gap-8">
+        <div className="flex items-center">
           {/* Logo Structure from Image */}
           <div className="flex items-center h-16">
-            <div className="flex items-center gap-4">
+            {/* <div className="flex items-center gap-4">
               <div className="flex gap-1.5 h-14">
                 <div className="w-14 h-14 border-[7px] border-zoho-blue rounded-sm"></div>
                 <div className="w-14 h-14 border-[7px] border-zoho-blue rounded-sm"></div>
@@ -35,10 +36,15 @@ export const Navbar = () => {
                   VANDEXA
                 </span>
               </div>
-            </div>
+            </div> */}
+            <img
+              src={cloud_vandexa_logo}
+              alt="CloudVandexa Logo"
+              className="w-80"
+            />
           </div>
 
-          <div className="h-12 w-0.5 bg-slate-800"></div>
+          <div className="h-12 w-0.5 mr-8 bg-slate-800"></div>
 
           {/* Zoho Premium Partner Badge (Deeper Match) */}
           <div className="hidden sm:flex items-center border border-slate-100 rounded-lg bg-slate-50 overflow-hidden shadow-sm h-11">
