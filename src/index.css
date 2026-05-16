@@ -33,6 +33,11 @@ html::-webkit-scrollbar,
 body::-webkit-scrollbar {
   display: none;
 }
+
+html,
+body {
+  overflow-x: hidden;
+}
 body {
   -ms-overflow-style: none;
   scrollbar-width: none;
