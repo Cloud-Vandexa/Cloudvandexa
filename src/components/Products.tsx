@@ -3,10 +3,15 @@ import zoho_creator from '../assets/zoho_creator_desktop.png';
 import zoho_crm_plus from '../assets/zoho_crm_plus.png';
 import zoho_mail from '../assets/zoho_mail.png';
 import zoho_one from '../assets/zoho_one.png';
-
+import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
 export const Products = () => {
+  const transition: any = {
+    duration: 0.8,
+    ease: 'easeInOut'
+  };
   return (
-    <section className="bg-zoho-blue text-white">
+    <section className="bg-zoho-blue text-white overflow-hidden">
       <div className=" py-20 text-center ">
         <h2 className="text-4xl font-extralight mb-8">Zoho Products</h2>
         <p className="max-w-[78vw] mx-auto px-4 text-lg font-light  font-montserrat">
@@ -17,10 +22,22 @@ export const Products = () => {
 
       {/* Zoho One */}
       <div className="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row items-center gap-6">
-        <div className="lg:w-1/2">
+        <motion.div
+          className="lg:w-1/2"
+          initial={{ x: -200, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={transition}
+        >
           <img src={zoho_one} alt="Zoho One" className="w-full h-auto " />
-        </div>
-        <div className="lg:w-1/2">
+        </motion.div>
+        <motion.div
+          initial={{ x: 200, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={transition}
+          className="lg:w-1/2"
+        >
           <h3 className="text-[34px] font-light  mb-8">Zoho One</h3>
           <p className=" text-lg font-light mb-12">
             Zoho One integration provides access to a variety of business
@@ -29,17 +46,32 @@ export const Products = () => {
             Solopreneurs, Start-ups, and SMBs, all of which can be customized to
             fit your business needs.
           </p>
-          <button className="bg-white text-black px-8 font-noto-sans text-sm py-2 rounded-full">
+          <Link
+            to="/contact-us"
+            className="bg-white text-black px-8 font-noto-sans text-sm py-2 rounded-full"
+          >
             Get in touch
-          </button>
-        </div>
+          </Link>
+        </motion.div>
       </div>
       {/* Zoho CRM+ */}
       <div className="max-w-7xl mx-auto px-4 flex flex-col-reverse lg:flex-row-reverse items-center gap-6 mt-16">
-        <div className="lg:w-1/2">
+        <motion.div
+          initial={{ x: 200, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={transition}
+          className="lg:w-1/2"
+        >
           <img src={zoho_crm_plus} alt="Zoho CRM+" className="w-full h-auto " />
-        </div>
-        <div className="lg:w-1/2">
+        </motion.div>
+        <motion.div
+          initial={{ x: -200, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={transition}
+          className="lg:w-1/2"
+        >
           <h3 className="text-[34px] font-light  mb-8">Zoho CRM+</h3>
           <p className=" text-lg font-light mb-12">
             Zoho CRM, will help you in managing and preventing the loss of
@@ -48,22 +80,37 @@ export const Products = () => {
             to all the data, so that interactions with your customers become
             more efficient.
           </p>
-          <button className="bg-white text-black px-8 font-noto-sans text-sm py-2 rounded-full">
+          <Link
+            to="/contact-us"
+            className="bg-white text-black px-8 font-noto-sans text-sm py-2 rounded-full"
+          >
             Get in touch
-          </button>
-        </div>
+          </Link>
+        </motion.div>
       </div>
 
       {/*Zoho Creator*/}
       <div className="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row items-center gap-6">
-        <div className="lg:w-1/2">
+        <motion.div
+          initial={{ x: -200, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={transition}
+          className="lg:w-1/2"
+        >
           <img
             src={zoho_creator}
             alt="Zoho Creator"
             className="w-full h-auto "
           />
-        </div>
-        <div className="lg:w-1/2">
+        </motion.div>
+        <motion.div
+          initial={{ x: 200, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={transition}
+          className="lg:w-1/2"
+        >
           <h3 className="text-[34px] font-light  mb-8">Zoho Creator</h3>
           <p className=" text-lg font-light mb-12">
             Using Zoho CRM Plus, businesses can unify customer information,
@@ -71,18 +118,33 @@ export const Products = () => {
             offer excellent customer experiences across the entire customer
             lifecycle.
           </p>
-          <button className="bg-white text-black px-8 font-noto-sans text-sm py-2 rounded-full">
+          <Link
+            to="/contact-us"
+            className="bg-white text-black px-8 font-noto-sans text-sm py-2 rounded-full"
+          >
             Get in touch
-          </button>
-        </div>
+          </Link>
+        </motion.div>
       </div>
 
       {/* Zoho Mail */}
       <div className="max-w-7xl mx-auto px-4 flex flex-col-reverse lg:flex-row-reverse items-center gap-6 mt-16">
-        <div className="lg:w-1/2">
+        <motion.div
+          initial={{ x: 200, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={transition}
+          className="lg:w-1/2"
+        >
           <img src={zoho_mail} alt="Zoho Mail" className="w-full h-auto " />
-        </div>
-        <div className="lg:w-1/2">
+        </motion.div>
+        <motion.div
+          initial={{ x: -200, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={transition}
+          className="lg:w-1/2"
+        >
           <h3 className="text-[34px] font-light  mb-8">Zoho Mail</h3>
           <p className=" text-lg font-light mb-12">
             Zoho Mail is the complete solution for the entire business
@@ -91,20 +153,26 @@ export const Products = () => {
             mails. Create a lasting impression on your recipients even before
             they read it.
           </p>
-          <button className="bg-white text-black px-8 font-noto-sans text-sm py-2 rounded-full">
+          <Link
+            to="/contact-us"
+            className="bg-white text-black px-8 font-noto-sans text-sm py-2 rounded-full"
+          >
             Get in touch
-          </button>
-        </div>
+          </Link>
+        </motion.div>
       </div>
 
       <div className="py-24 text-center bg-white">
         <h2 className="text-[34px]  mb-6 leading-[1.8] font-montserrat text-black">
           To know more
         </h2>
-        <button className="bg-zoho-blue text-white px-12 py-4 rounded-md text-lg hover:shadow-xl transition-all flex m-auto gap-4 items-center font-noto-sans">
+        <Link
+          to="/contact-us"
+          className="bg-zoho-blue text-white px-12 py-4 rounded-md text-lg hover:shadow-xl transition-all flex w-fit m-auto gap-4 items-center font-noto-sans"
+        >
           <MessagesSquare size={20} />
           <p>Schedule Meeting</p>
-        </button>
+        </Link>
       </div>
     </section>
   );

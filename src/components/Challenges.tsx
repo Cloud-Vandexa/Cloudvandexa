@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Puzzle } from 'lucide-react';
+import puzzle_vector from '../assets/puzzle_vector.png';
+import { Link } from 'react-router-dom';
 
 export const Challenges = () => {
   return (
@@ -14,21 +15,22 @@ export const Challenges = () => {
             <p>Infinite Possibilities &</p>
             <p>Easy business</p>
           </div>
-          <button className="bg-zoho-gray text-sm text-white px-10 py-3 rounded-full shadow-lg hover:brightness-110 transition-all uppercase tracking-widest font-noto-sans">
+          <Link
+            to="/contact-us"
+            className="bg-zoho-gray text-sm text-white px-10 py-3 rounded-full shadow-lg hover:brightness-110 transition-all uppercase tracking-widest font-noto-sans"
+          >
             Contact Us
-          </button>
+          </Link>
         </div>
         <div className="lg:w-1/2 flex justify-center">
           <motion.div
-            animate={{ y: [0, -20, 0] }}
-            transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+            initial={{ x: 200, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, ease: 'easeInOut' }}
             className="relative"
           >
-            <Puzzle size={400} className="text-zoho-blue/5" />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-16 h-1 w-[400px] bg-zoho-blue/10 rounded-full blur-xl absolute bottom-0"></div>
-              <Puzzle size={240} className="text-zoho-blue" />
-            </div>
+            <img src={puzzle_vector} alt="puzzle" />
           </motion.div>
         </div>
       </div>

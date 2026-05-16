@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronDown } from 'lucide-react';
 import { ZohoLogo } from './ZohoLogo';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const { pathname } = useLocation();
+
+  const linkColor = pathname === '/' ? 'text-zoho-blue-bright' : 'text-black';
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 0);
@@ -45,8 +48,8 @@ export const Navbar = () => {
             <div className="bg-zoho-blue text-white px-3 py-2 flex flex-col justify-center h-full text-[10px] font-thin leading-[0.9] ">
               <span className="text-[11px] font-light">Zoho</span>
               <span>
-                <span className="font-extralight">P</span>
-                <span>remium</span>
+                <span className="font-light">A</span>
+                <span>ctive</span>
               </span>
               <span>
                 <span className="font-extralight">P</span>
@@ -56,29 +59,32 @@ export const Navbar = () => {
           </div>
         </div>
 
-        <div className="hidden lg:flex items-center space-x-12 font-normal text-slate-500 text-[17px]">
-          <a href="#" className="text-zoho-blue-bright ">
+        <div className="hidden lg:flex items-center gap-8 text-black font-noto-sans text-[15px]">
+          <Link
+            to="/"
+            className={`hover:text-zoho-blue-bright ${linkColor} transition-colors px-3`}
+          >
             Home
-          </a>
-          <a
-            href="#"
-            className="hover:text-zoho-blue-bright  transition-colors"
+          </Link>
+          <NavLink
+            to="/about"
+            className="hover:text-zoho-blue-bright  transition-colors  px-3"
+          >
+            About
+          </NavLink>
+          <NavLink
+            to="/services"
+            className="hover:text-zoho-blue-bright  transition-colors px-3"
           >
             Services
-          </a>
-          <a
-            href="#"
-            className="hover:text-zoho-blue-bright  transition-colors"
+          </NavLink>
+          <NavLink
+            to="/privacy-policy"
+            className="hover:text-zoho-blue-bright  transition-colors px-3"
           >
-            Clients
-          </a>
-          {/* <a
-            href="#"
-            className="hover:text-zoho-blue-bright  transition-colors"
-          >
-            Case Studies
-          </a> */}
-          <div className="group relative flex items-center gap-1 cursor-pointer hover:text-zoho-blue transition-colors">
+            Privacy Policy
+          </NavLink>
+          {/* <div className="group relative flex items-center gap-1 cursor-pointer hover:text-zoho-blue transition-colors">
             More <ChevronDown size={14} />
             <div className="absolute top-full right-0 bg-white shadow-2xl py-4 flex flex-col w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 rounded-lg border border-slate-50 mt-2">
               <a
@@ -100,7 +106,7 @@ export const Navbar = () => {
                 Support
               </a>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </nav>

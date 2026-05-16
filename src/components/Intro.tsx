@@ -1,27 +1,15 @@
-import React from 'react';
 import { motion } from 'motion/react';
-import { LayoutGrid, Puzzle } from 'lucide-react';
+import puzzle from '../assets/puzzle_mascott.png';
 
 export const Intro = () => {
   return (
     <section className="py-32">
       <div className="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row gap-20 items-center">
         <div className="lg:w-1/2 relative group">
-          <div className="absolute -top-6 -left-6 bg-zoho-blue text-white px-3 py-1 font-bold text-xs tracking-widest uppercase">
-            CVX
-          </div>
-          <div className="w-full h-[500px] bg-slate-50 flex items-center justify-center rounded-lg shadow-sm border border-gray-100 p-12 overflow-hidden">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              className="relative"
-            >
-              <LayoutGrid size={350} className="text-zoho-blue/5" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <Puzzle size={180} className="text-zoho-blue" />
-              </div>
-            </motion.div>
+          <div className="w-full h-125 flex items-center justify-center ">
+            <div className=" h-100 w-100 flex items-center justify-center">
+              <img src={puzzle} alt="puzzle" />
+            </div>
           </div>
         </div>
         <div className="lg:w-1/2 font-montserrat">

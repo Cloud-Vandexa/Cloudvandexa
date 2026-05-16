@@ -21,6 +21,15 @@
   --font-noto-sans: 'Noto Sans', sans-serif;
 }
 
+.active {
+  background-color: var(--color-zoho-blue-bright);
+  color: #fff;
+  padding-block: 4px;
+  padding-inline: 12px;
+  border-radius: 4px;
+}
+
+html::-webkit-scrollbar,
 body::-webkit-scrollbar {
   display: none;
 }
