@@ -20,7 +20,7 @@ export const Footer = () => {
               <div className="flex items-center justify-center lg:justify-start gap-6">
                 <Mail className="text-zoho-blue" size={22.5} />
                 <span className=" font-light lowercase">
-                  contact@ohosolutions.in
+                  info@cloudvandexa.com
                 </span>
               </div>
             </div>
