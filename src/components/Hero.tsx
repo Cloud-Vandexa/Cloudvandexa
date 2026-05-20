@@ -26,7 +26,7 @@ export const Hero = () => {
             to="/contact-us"
             className="bg-slate-50 mt-auto text-slate-800 px-10 py-3 rounded-full font-medium text-sm hover:shadow-2xl hover:scale-105 transition-all duration-300 mb-6"
           >
-            Get CloudVandexa Solution
+            Get in Touch with Us
           </Link>
           <span className="text-4xl md:text-5xl font-extralight tracking-widest text-white/40 mb-6 select-none">
             Welcome

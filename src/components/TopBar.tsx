@@ -22,16 +22,16 @@ export const TopBar = () => {
         <div className="flex items-center font-noto-sans">
           <a
             href="mailto:info@cloudvandexa.com"
-            className="flex items-center gap-2 hover:opacity-80 transition-opacity border-dotted border-r-2 pr-6"
+            className="flex items-center gap-2 hover:opacity-80 transition-opacity  pr-6"
           >
             <Mail size={13} className="fill-white/20" /> info@cloudvandexa.com
           </a>
-          <a
+          {/* <a
             href="tel:+919217757952"
             className="flex items-center gap-2 hover:opacity-80 transition-opacity pl-6"
           >
             <Phone size={13} className="fill-white/20" /> 9217757952
-          </a>
+          </a> */}
         </div>
         <div className="flex items-center gap-4">
           <Link

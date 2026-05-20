@@ -14,8 +14,8 @@ export const Footer = () => {
             </h3>
             <div className="mb-12">
               <div className="flex items-center justify-center lg:justify-start gap-6 mb-6">
-                <Phone className="text-zoho-blue" size={22.5} />
-                <span className=" font-light">+91-9217757952</span>
+                {/* <Phone className="text-zoho-blue" size={22.5} />
+                <span className=" font-light">+91-9217757952</span> */}
               </div>
               <div className="flex items-center justify-center lg:justify-start gap-6">
                 <Mail className="text-zoho-blue" size={22.5} />
