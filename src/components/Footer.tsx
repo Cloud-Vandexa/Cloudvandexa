@@ -152,17 +152,34 @@ export const Footer = () => {
                 Contact Us
               </h3>
               <ul className="space-y-4 text-sm text-slate-300">
-                <li className="flex items-center gap-3">
-                  <Phone className="text-zoho-blue" size={18} />
-                  <span>+91 8679 390450</span>
+                <li>
+                  <a
+                    href="tel:+918796390450"
+                    className="flex items-center gap-3 cursor-pointer"
+                  >
+                    <Phone className="text-zoho-blue" size={18} />
+                    <span>+91 8796 390450</span>
+                  </a>
                 </li>
-                <li className="flex items-center gap-3">
-                  <Mail className="text-zoho-blue" size={18} />
-                  <span>info@cloudvandexa.com</span>
+                <li>
+                  <a
+                    href="mailto:info@cloudvandexa.com"
+                    className="flex items-center gap-3 cursor-pointer"
+                  >
+                    <Mail className="text-zoho-blue" size={18} />
+                    <span>info@cloudvandexa.com</span>
+                  </a>
                 </li>
-                <li className="flex items-center gap-3">
-                  <MessageCircle className="text-zoho-blue" size={18} />
-                  <span>WhatsApp Chat</span>
+                <li>
+                  <a
+                    href="https://wa.me/918796390450"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex items-center gap-3 cursor-pointer"
+                  >
+                    <MessageCircle className="text-zoho-blue" size={18} />
+                    <span>WhatsApp Chat</span>
+                  </a>
                 </li>
                 <li className="flex items-center gap-3">
                   <MapPin className="text-zoho-blue" size={18} />

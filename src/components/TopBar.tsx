@@ -31,7 +31,7 @@ export const TopBar = () => {
             className="flex items-center gap-2 hover:opacity-80 transition-opacity pl-6"
           >
             <Phone size={13} className="fill-white/20" />
-            +91 8679 390450
+            +91 8796 390450
           </a>
         </div>
         <div className="flex items-center gap-4">
