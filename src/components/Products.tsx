@@ -208,12 +208,12 @@ export const Products = () => {
                 transition={transition}
                 className="flex items-center justify-center"
               >
-                <div className="overflow-hidden bg-transparent">
+                <div className="overflow-hidden w-[80%] md:w-[70%] lg:w-full mx-auto md:mx-0 bg-transparent">
                   <img
                     src={product.image}
                     alt={product.imageAlt}
                     loading="lazy"
-                    className="h-[520px] w-full object-cover"
+                    className="md:h-130 w-full object-cover"
                   />
                 </div>
               </motion.div>

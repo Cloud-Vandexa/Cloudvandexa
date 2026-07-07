@@ -44,13 +44,15 @@ export const HowWeWork = () => {
               key={step.title}
               className="rounded-[32px] border border-white/20 bg-white/10 p-8 shadow-lg backdrop-blur-sm"
             >
-              <div className="flex h-14 w-14 items-center justify-center rounded-full bg-slate-100/10 text-xl font-semibold text-white">
-                {`0${index + 1}`}
+              <div className="flex items-center gap-4">
+                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-slate-100/10 text-xl font-semibold text-white">
+                  {`0${index + 1}`}
+                </div>
+                <h3 className="mt-6 h-14 text-xl font-semibold text-white">
+                  {step.title}
+                </h3>
               </div>
-              <h3 className="mt-6 text-xl font-semibold text-white">
-                {step.title}
-              </h3>
-              <p className="mt-4 text-sm leading-7 text-slate-200/90">
+              <p className="text-sm leading-7 text-slate-200/90">
                 {step.description}
               </p>
             </div>

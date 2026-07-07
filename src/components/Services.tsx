@@ -14,37 +14,37 @@ export const Services = () => {
     {
       title: 'ZOHO CONSULTING',
       icon: <Users />,
-      desc: 'We deliver value-driven solutions as certified Zoho experts, designed to elevate your business to the next level. Simply share your existing workflows, challenges, and goals with our consultants, and we will craft the most effective Zoho solution tailored to your growth'
+      desc: `Certified Zoho experts delivering value-driven solutions. Share your workflows and challenges, and we'll craft the perfect Zoho solution tailored to your growth.`
     },
     {
       title: 'Zoho Implementation',
       icon: <Settings />,
-      desc: 'Our certified Zoho experts bring years of implementation experience and ensure a seamless deployment through rigorous testing, quality assurance, and best practices—delivering reliable solutions built to solve your unique business challenges.'
+      desc: 'Expert implementation with years of experience. We ensure seamless deployment through rigorous testing, quality assurance, and best practices.'
     },
     {
       title: 'Zoho Customization',
       icon: <LayoutGrid />,
-      desc: 'Our customization services make Zoho products more efficient and aligned with your business processes, helping you grow faster through smart automation. We understand that one size does not fit all, which is why we deliver tailored solutions designed around your unique operational needs.'
+      desc: `Tailored customization that aligns Zoho with your business processes. One size doesn't fit all—we build solutions around your unique needs.`
     },
     {
       title: 'Zoho Data Migration',
       icon: <Database />,
-      desc: 'Our data migration services eliminate the complexities of transferring business data. We ensure a smooth and secure migration from third-party applications to Zoho solutions, enabling higher productivity, cleaner systems, and uninterrupted business operations.'
+      desc: 'Eliminate migration complexities. We ensure smooth, secure transfers from third-party apps to Zoho, enabling higher productivity and uninterrupted operations.'
     },
     {
       title: 'Zoho Integration',
       icon: <Share2 />,
-      desc: 'Our Zoho integration services connect your existing applications with Zoho products to create a unified and efficient business ecosystem. We enable seamless data flow, reduce manual work, and improve productivity by integrating systems that help your teams operate smarter and faster.'
+      desc: 'Connect your existing applications with Zoho to create a unified ecosystem. Seamless data flow, reduced manual work, and improved productivity for smarter operations.'
     },
     {
       title: 'Zoho Training',
       icon: <GraduationCap />,
-      desc: 'Our CloudVandexa experts help your team become productive with Zoho from day one. Our subject matter specialists provide structured training, hands-on guidance, and continuous support to ensure a smooth adoption and successful business transition.'
+      desc: 'Get your team productive with Zoho from day one. Structured training, hands-on guidance, and continuous support for smooth adoption and success.'
     },
     {
       title: 'Zoho Support',
       icon: <HelpCircle />,
-      desc: 'Our Zoho support services ensure your business runs smoothly with timely assistance, expert guidance, and proactive issue resolution. Our dedicated specialists help you optimize performance, address challenges quickly, and keep your Zoho ecosystem operating efficiently at all times.'
+      desc: 'Timely assistance and proactive issue resolution. Our specialists optimize performance, address challenges quickly, and keep your Zoho ecosystem running efficiently.'
     }
   ];
 
@@ -62,11 +62,11 @@ export const Services = () => {
           </p>
         </div>
 
-        <div className="flex flex-wrap gap-8 py-8 px-12 bg-zoho-blue justify-center">
+        <div className="flex flex-col md:flex-row flex-wrap gap-8 py-8 px-12 bg-zoho-blue justify-center">
           {serviceList.map((s, i) => (
             <div
               key={i}
-              className="bg-white max-w-[80vw] md:max-w-[30vw] lg:w-[25vw] flex-1 lg:flex-none flex flex-col min-h-[30vh] rounded-xl shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 ease-in-out"
+              className="bg-white max-w-[80vw] md:max-w-[30vw] lg:w-[25vw] flex-1 lg:flex-none flex flex-col max-h-[30vh] rounded-xl shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 ease-in-out"
             >
               <div className="flex items-center justify-center gap-2 px-5 py-3  font-noto-sans">
                 <div className="text-zoho-blue  items-center justify-center rounded-xl hidden md:flex">
@@ -81,7 +81,7 @@ export const Services = () => {
                 </h3>
               </div>
 
-              <p className="text-black font-light text-[14px] leading-[1.8] text-justify px-4">
+              <p className="text-black font-light text-[14px] leading-[1.8] text-justify pb-2 px-4">
                 {s.desc}
               </p>
             </div>

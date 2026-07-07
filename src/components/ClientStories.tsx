@@ -59,7 +59,6 @@ export const ClientStories = () => {
                 </div>
                 <div>
                   <p className="font-semibold text-slate-900">{item.name}</p>
-                  <p className="mt-1 text-sm text-slate-500">{item.role}</p>
                 </div>
               </div>
             </div>

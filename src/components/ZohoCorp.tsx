@@ -17,7 +17,7 @@ export const ZohoCorp = () => {
           transition={transition}
           className="lg:w-1/2 flex justify-center"
         >
-          <ZohoLogo className="h-48 md:h-64" />
+          <ZohoLogo className="h-48 md:h-64 w-[90%]" />
         </motion.div>
         <div className="lg:w-1/2">
           <motion.h2
