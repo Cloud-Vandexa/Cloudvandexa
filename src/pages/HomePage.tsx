@@ -1,23 +1,19 @@
 import { Hero } from '../components/Hero';
-import { Intro } from '../components/Intro';
-import { Challenges } from '../components/Challenges';
-import { Services } from '../components/Services';
-import { QuantitativeBanner } from '../components/QuantitativeBanner';
-import { Products } from '../components/Products';
 import { MoreProducts } from '../components/MoreProducts';
+import { Products } from '../components/Products';
+import { QuantitativeBanner } from '../components/QuantitativeBanner';
 import { ZohoCorp } from '../components/ZohoCorp';
 import { ZohoCreator } from '../components/ZohoCreator';
+import { ClientStories } from '../components/ClientStories';
 
 export const HomePage = () => {
   return (
     <>
       <Hero />
-      <Intro />
-      <Challenges />
-      <Services />
-      <QuantitativeBanner />
       <Products />
       <MoreProducts />
+      <ClientStories />
+      <QuantitativeBanner />
       <ZohoCorp />
       <ZohoCreator />
     </>

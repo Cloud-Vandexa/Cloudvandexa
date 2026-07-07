@@ -1,3 +1,5 @@
+import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
 import zoho_projects from '../assets/zoho_projects.png';
 import zoho_people from '../assets/svg/zoho_people.svg';
 import zoho_books from '../assets/svg/zoho_books.svg';
@@ -5,96 +7,107 @@ import zoho_analytics from '../assets/zoho_analytics.png';
 import zoho_sales_iq from '../assets/svg/zoho_sales_iq.svg';
 import zoho_payroll from '../assets/zoho_payroll.png';
 import zoho_workplace from '../assets/svg/zoho_workplace.svg';
+import zoho_mail from '../assets/zoho_mail_logo.png';
 
-const products = [
+const moreProducts = [
   {
-    name: 'Projects',
-    color: '#F23D2E',
+    name: 'Zoho Projects',
+    tag: 'Projects',
     icon: zoho_projects,
-    scale: 'scale-[1.2]'
+    description: 'Task management, Gantt charts, and timesheets.'
   },
   {
-    name: 'People',
-    color: '#06A64A',
+    name: 'Zoho People',
+    tag: 'HR',
     icon: zoho_people,
-    scale: 'scale-[1.2]'
+    description: 'HRMS for attendance, payroll, and performance.'
   },
   {
-    name: 'Books',
-    color: '#1D7FCE',
+    name: 'Zoho Books',
+    tag: 'Accounting',
     icon: zoho_books,
-    scale: 'scale-[1.1]'
+    description: 'GST-ready accounting, invoicing, and bank reconciliation.'
   },
   {
-    name: 'Analytics',
-    color: '#EA1B25',
+    name: 'Zoho Analytics',
+    tag: 'Analytics',
     icon: zoho_analytics,
-    scale: 'scale-[1.2]'
+    description: 'BI dashboards and data blending across all your apps.'
   },
   {
-    name: 'SalesIQ',
-    color: '#EA1B25',
+    name: 'Zoho SalesIQ',
+    tag: 'Sales',
     icon: zoho_sales_iq,
-    scale: 'scale-[1.1]'
+    description: 'Website chat, lead scoring, and visitor tracking.'
   },
   {
-    name: 'Payroll',
-    color: '#E73030',
+    name: 'Zoho Payroll',
+    tag: 'Payroll',
     icon: zoho_payroll,
-    scale: 'scale-[1.2]'
+    description: 'Payroll, compliance, and employee salary processing.'
   },
   {
-    name: 'Workplace',
-    color: '#EA1B25',
+    name: 'Zoho Workplace',
+    tag: 'Collaboration',
     icon: zoho_workplace,
-    scale: 'scale-[1.2]'
+    description: 'Mail, Cliq, WorkDrive, and meetings in one suite.'
+  },
+  {
+    name: 'Zoho Mail',
+    tag: 'Email',
+    icon: zoho_mail,
+    description: 'Secure business email with calendars and collaboration tools.'
   }
 ];
 
 export const MoreProducts = () => {
   return (
-    <section className="bg-[#F7F5F0] py-24">
-      <div className="max-w-6xl mx-auto px-4 text-center">
-        <h2 className="text-[32px]  leading-[1.8] text-slate-900 uppercase mb-16 font-montserrat">
-          More Products...
-        </h2>
+    <section className="bg-zoho-blue-light py-24">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="text-center mb-16">
+          <span className="inline-flex uppercase tracking-[0.35em] text-sm font-semibold text-slate-500">
+            More Products
+          </span>
+          <h2 className="mt-5 text-4xl font-semibold text-slate-900">
+            More Zoho Apps We Implement
+          </h2>
+        </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-24 items-start">
-          {products.slice(0, 3).map((product) => (
-            <div
+        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
+          {moreProducts.map((product, index) => (
+            <motion.div
               key={product.name}
-              className="flex items-center justify-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.6, delay: index * 0.05 }}
+              className="rounded-[32px] border border-slate-200/80 bg-white p-6 shadow-sm hover:scale-105 transition-transform duration-300 cursor-pointer"
             >
               <img
-                className={`w-[197.78px] h-15 bg-cover ${product.scale ? product.scale : ''}`}
                 src={product.icon}
-                alt="product.name"
+                alt={product.name}
+                className="mb-6 h-28 w-full object-contain"
               />
-            </div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">
+                {product.name}
+              </h3>
+              <p className="text-sm leading-7 text-slate-600 mb-5">
+                {product.description}
+              </p>
+              <span className="inline-flex rounded-full bg-zoho-blue-light px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-slate-600">
+                {product.tag}
+              </span>
+            </motion.div>
           ))}
+        </div>
 
-          {products.slice(3, 6).map((product) => (
-            <div
-              key={product.name}
-              className="flex items-center justify-center"
-            >
-              <img
-                className={`w-[197.78px] h-15 bg-cover ${product.scale ? product.scale : ''}`}
-                src={product.icon}
-                alt="product.name"
-              />
-            </div>
-          ))}
-
-          <div className="sm:col-span-3 flex justify-center">
-            <div className="flex items-center justify-center">
-              <img
-                className="w-[197.78px] h-15 bg-cover"
-                src={products[6].icon}
-                alt="product.name"
-              />
-            </div>
-          </div>
+        <div className="mt-16 text-center">
+          <Link
+            to="/contact-us"
+            className="inline-flex items-center justify-center rounded-full bg-zoho-blue px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-zoho-blue/20 transition hover:bg-zoho-blue-bright"
+          >
+            Ask About Any Zoho Product →
+          </Link>
         </div>
       </div>
     </section>

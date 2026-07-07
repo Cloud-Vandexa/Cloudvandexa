@@ -1,4 +1,9 @@
 import React from 'react';
+import { Intro } from '../components/Intro';
+import { Challenges } from '../components/Challenges';
+import { Services } from '../components/Services';
+import { WhyCloudVandexa } from '../components/WhyCloudVandexa';
+import { HowWeWork } from '../components/HowWeWork';
 import {
   CheckCircle2,
   Target,
@@ -116,7 +121,11 @@ export const AboutPage = () => {
           </p>
         </div>
       </section>
-
+      <Intro />
+      <WhyCloudVandexa />
+      <Challenges />
+      <HowWeWork />
+      <Services />
       {/* Our Approach */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4">

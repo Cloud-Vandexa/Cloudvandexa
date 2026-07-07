@@ -49,38 +49,39 @@ export const Services = () => {
   ];
 
   return (
-    <section className="py-24 bg-slate-50/50">
-      <div className="max-w-7xl mx-auto px-4 font-poppins">
+    <section className="py-24 bg-zoho-blue">
+      <div className="font-poppins">
         <div className="text-center mb-20">
-          <h2 className="text-3xl md:text-4xl font-light text-slate-800 mb-6">
+          <h2 className="text-3xl md:text-4xl font-light text-white mb-6">
             Exceptional Zoho Experience with CloudVandexa
           </h2>
-          <div className="w-16 h-1 bg-zoho-blue mx-auto mb-10"></div>
-          <p className="text-lg text-zoho-black font-light max-w-4xl mx-auto ">
+          <div className="w-16 h-1  mx-auto mb-2"></div>
+          <p className="text-lg text-white font-light max-w-4xl mx-auto ">
             We are committed to delivering strategic solutions, seamless
             support, and a service experience that drives real business success.
           </p>
         </div>
 
-        <div className="flex flex-wrap gap-8 px-6 justify-center">
+        <div className="flex flex-wrap gap-8 py-8 px-12 bg-zoho-blue justify-center">
           {serviceList.map((s, i) => (
             <div
               key={i}
-              className="bg-white max-w-[80vw] md:max-w-[30vw] lg:w-[20vw] flex-1 lg:flex-none flex flex-col h-full"
+              className="bg-white max-w-[80vw] md:max-w-[30vw] lg:w-[25vw] flex-1 lg:flex-none flex flex-col min-h-[30vh] rounded-xl shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 ease-in-out"
             >
-              <div className="flex items-center justify-center mb-6 gap-2 px-5 py-3 bg-zoho-blue font-noto-sans">
+              <div className="flex items-center justify-center gap-2 px-5 py-3  font-noto-sans">
                 <div className="text-zoho-blue  items-center justify-center rounded-xl hidden md:flex">
                   {React.cloneElement(s.icon as React.ReactElement, {
                     size: 20,
-                    color: '#fff'
+                    color: '#328fe7',
+                    strokeWidth: 2.5
                   })}
                 </div>
-                <h3 className="text-base lg:text-lg text-white text-nowrap">
+                <h3 className="text-base font-semibold w-full text-left lg:text-lg text-zoho-blue-bright text-nowrap">
                   {s.title}
                 </h3>
               </div>
 
-              <p className="text-black font-light text-[16px] leading-[1.8] text-justify">
+              <p className="text-black font-light text-[14px] leading-[1.8] text-justify px-4">
                 {s.desc}
               </p>
             </div>

@@ -58,8 +58,8 @@ export const Navbar = () => {
                   Zoho
                 </span>
                 <span>
-                  <span className="font-light">A</span>
-                  <span>ctive</span>
+                  <span className="font-light">Re</span>
+                  <span>seller</span>
                 </span>
                 <span>
                   <span className="font-extralight">P</span>
@@ -123,6 +123,7 @@ export const Navbar = () => {
           >
             Services
           </NavLink>
+
           <NavLink
             to="/privacy-policy"
             className={({ isActive }) =>
@@ -172,6 +173,7 @@ export const Navbar = () => {
                   >
                     Services
                   </NavLink>
+
                   <NavLink
                     to="/privacy-policy"
                     className={({ isActive }) =>
@@ -191,7 +193,7 @@ export const Navbar = () => {
                       <Mail size={13} className="fill-white/20" />
                     </a>
                     <a
-                      href="tel:+919217757952"
+                      href="tel:+918679390450"
                       className="flex items-center gap-2 hover:opacity-80 transition-opacity"
                     >
                       <Phone size={13} className="fill-white/20" />

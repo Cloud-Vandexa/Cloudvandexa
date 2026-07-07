@@ -7,7 +7,7 @@ export const Intro = () => {
       <div className="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row gap-20 items-center">
         <div className="lg:w-1/2 relative group">
           <div className="w-full h-125 flex items-center justify-center ">
-            <div className=" h-100 w-100 flex items-center justify-center">
+            <div className=" h-100 w-100̥ flex items-center justify-center">
               <img src={puzzle} alt="puzzle" />
             </div>
           </div>

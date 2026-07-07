@@ -1,210 +1,246 @@
 import {
-  Users,
-  Settings,
-  Database,
-  GraduationCap,
-  HelpCircle,
-  Share2,
+  CheckCircle2,
   Code,
-  LineChart,
-  HardHat,
+  Database,
+  HelpCircle,
   MonitorCheck,
-  Smartphone,
+  Settings,
   ShieldCheck,
+  Share2,
+  Smartphone,
+  Users,
   Zap
 } from 'lucide-react';
-import customer_support from '../assets/customer_support.jpg';
-import { PopupButton, Sidetab, Widget } from '@typeform/embed-react';
 import { Link } from 'react-router-dom';
 
-export const ServicesPage = () => {
-  const serviceCards = [
-    {
-      icon: Users,
-      title: 'Consultation for Digital Transformation.',
-      description:
-        'We listen to you and understand your problems and pain points through consultation and suggest the best possible solution that can be implemented using various products from ZOHO. Here, we aim to not sell you a product, but a solution that caters for your business needs. We help you to technologically transform the workflow of your business and help you in figuring out what solutions can actually resolve your problems better.'
-    },
-    {
-      icon: Share2,
-      title: 'Seamless Integration with External Apps.',
-      description:
-        'Unlike other business automation companies, we don’t just give you what you asked for. We try and ensure that you get the best. When we deliver you a solution, we make sure that it is the most feasible one. We have seen our clients suffer due to their past experiences wherein they struggled to get data from their ERP software to CRMs and much more. To resolve this struggle, we have made a seamless integration with external applications possible through API Integration. This will help you in transferring data from one software to another hassle-free.'
-    },
-    {
-      icon: Settings,
-      title: 'Customisation and Development',
-      description:
-        'We don’t have a rigid rule for you to choose from a set of applications with standard features because we understand that all businesses are unique and hence have different problems to address. We custom-build the ZOHO Applications in a way that can cater for your business needs and requirements right. This will ensure a personalized solution for all your problems.'
-    },
-    {
-      icon: Database,
-      title: 'Data Migration in Zoho Apps',
-      description:
-        'Unlike other business automation companies, we don’t just give you what you asked for. We try and ensure that you get the best. When we deliver you a solution, we make sure that it is the most feasible one. We have seen our clients suffer due to their past experiences wherein they struggled to get data from their ERP software to CRMs and much more. To resolve this struggle, we have made a seamless integration with external applications possible through API Integration. This will help you in transferring data from one software to another hassle-free.'
-    }
-  ];
+const services = [
+  {
+    eyebrow: 'Service 01',
+    title: 'Zoho Implementation',
+    description:
+      'We take you from zero to a fully live, configured Zoho system. Whether a single app or complete Zoho One suite, we handle every step.',
+    features: [
+      'Business process mapping and requirements analysis',
+      'Zoho One, CRM, Books, Creator, People and 45+ app setup',
+      'Role-based access control and user management',
+      'Data import and initial configuration',
+      'UAT testing and go-live support',
+      'Team training and handover documentation'
+    ],
+    cta: 'Get Started →',
+    image:
+      'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80',
+    icon: Settings
+  },
+  {
+    eyebrow: 'Service 02',
+    title: 'Customization & Automation',
+    description:
+      'Zoho configured for your exact workflow is transformative. We extend and automate every aspect of your Zoho environment.',
+    features: [
+      'Custom modules, fields, layouts, and views',
+      'Blueprint and process automation design',
+      'Deluge scripting for advanced custom functions',
+      'Workflow rules, approval processes, and alerts',
+      'Custom reports and analytics dashboards',
+      'Zoho Creator custom app development'
+    ],
+    cta: 'Discuss Requirements →',
+    image:
+      'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80',
+    icon: Code
+  },
+  {
+    eyebrow: 'Service 03',
+    title: 'Integration Services',
+    description:
+      'We connect Zoho with your existing tools — payment gateways, e-commerce platforms, communication tools, and custom APIs.',
+    features: [
+      'WhatsApp Business API integration with Zoho CRM',
+      'Razorpay, Stripe, PayU payment gateway integration',
+      'Shopify, WooCommerce, and e-commerce sync',
+      'Tally, QuickBooks, and accounting tool integration',
+      'Google Workspace, Microsoft 365 sync',
+      'Custom REST API and webhook development'
+    ],
+    cta: 'Plan Your Integration →',
+    image:
+      'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80',
+    icon: Share2
+  },
+  {
+    eyebrow: 'Service 04',
+    title: 'Zoho Reselling',
+    description:
+      'As a Zoho Reseller Partner, we sell any Zoho license at official pricing — with dedicated onboarding, local support, and billing in INR.',
+    features: [
+      'Official Zoho One, CRM, Books, and all app licenses',
+      'Best authorized partner pricing — no markups',
+      'Billing in INR with GST invoice',
+      'License management and renewal handling',
+      'Free onboarding support with every license'
+    ],
+    cta: 'Get Zoho License →',
+    image:
+      'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1200&q=80',
+    icon: Users
+  },
+  {
+    eyebrow: 'Service 05',
+    title: 'Data Migration',
+    description:
+      'We migrate from spreadsheets, legacy CRMs, or any existing software into Zoho cleanly, accurately, with zero downtime.',
+    features: [
+      'Data audit, cleaning, and de-duplication',
+      'Migration from Excel, Google Sheets, CSV files',
+      'Migration from Salesforce, HubSpot, Tally, legacy CRMs',
+      'Relationship mapping and data validation',
+      'Post-migration reconciliation report'
+    ],
+    cta: 'Plan Your Migration →',
+    image:
+      'https://images.unsplash.com/photo-1517433456452-f9633a875f6f?auto=format&fit=crop&w=1200&q=80',
+    icon: Database
+  },
+  {
+    eyebrow: 'Service 06',
+    title: 'AMC & Managed Support',
+    description:
+      'Our Annual Maintenance Contracts keep your Zoho system optimized and running perfectly as your business evolves.',
+    features: [
+      'Dedicated support engineer — same person every time',
+      'WhatsApp + email support with SLA guarantee',
+      'Monthly Zoho usage reports and optimization',
+      'New user onboarding and training included',
+      'Periodic system audits and health checks'
+    ],
+    cta: 'Get Support Plan →',
+    image:
+      'https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1200&q=80',
+    icon: MonitorCheck
+  }
+];
 
+export const ServicesPage = () => {
   return (
-    <main>
-      {/* Header */}
-      <section className="bg-zoho-blue py-12 border-b border-slate-100 relative overflow-hidden ">
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-20"
-          style={{ backgroundImage: `url(${customer_support})` }}
-        ></div>
-        <div className="max-w-7xl mx-auto px-4 relative z-10">
-          <h1 className="text-[39px] leading-[1.8] text-center text-white mb-6">
-            Services & Support
+    <main className="overflow-hidden">
+      <section className="relative overflow-hidden bg-zoho-blue-dark text-white">
+        <div className="absolute inset-0 opacity-80">
+          <img
+            src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1400&q=80"
+            alt="Zoho services strategy"
+            className="h-full w-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-zoho-blue/95 via-zoho-blue-dark/95 to-[#061426]/95" />
+        </div>
+
+        <div className="relative mx-auto max-w-7xl px-4 py-28">
+          <span className="inline-flex uppercase tracking-[0.35em] text-sm text-slate-200 opacity-80">
+            Our Services
+          </span>
+          <h1 className="mt-6 max-w-3xl text-4xl font-semibold leading-tight text-white md:text-5xl">
+            Everything You Need to Run on Zoho
           </h1>
-          <p className="text-base font-noto-sans font-light w-full text-center text-white leading-[1.8]">
-            Experience the CloudVandexa Difference with Customer-First Zoho
-            Services
-          </p>
-          <p className="mt-8 text-base text-white font-light text-center">
-            At <span className="font-medium text-white">CloudVandexa</span>, we
-            believe every business deserves solutions that create measurable
-            impact. Our customer-centric approach focuses on understanding your
-            goals, solving operational challenges, and delivering long-term
-            value through the right Zoho ecosystem.
+          <p className="mt-6 max-w-2xl text-base leading-8 text-slate-200/90">
+            From buying the right license to fully automating your operations —
+            we cover every step of your Zoho journey.
           </p>
         </div>
       </section>
 
-      {/* Extensive Services Breakdown */}
-      <section className="py-32">
-        <div className="mx-auto">
-          <div className="grid gap-x-12 gap-y-8 px-20 md:px-40 lg:grid-cols-2 mb-10">
-            {serviceCards.map((card) => {
-              const Icon = card.icon;
-              return (
-                <div
-                  key={card.title}
-                  className="rounded-4xl text-center shadow-2xl shadow-slate-200/40"
-                >
-                  <div className="flex gap-4 items-center text-lg font-montserrat mb-3">
-                    <div className="w-12 h-12 hidden md:flex items-center justify-center text-zoho-blue">
-                      <Icon size={40} />
-                    </div>
-                    <h2 className=" text-black">{card.title}</h2>
-                  </div>
-                  <p className="text-sm font-noto-sans text-black text-justify leading-[1.8]">
-                    {card.description}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
-          <div className="w-full text-center mt-12 mb-28">
-            <Link
-              to="/contact-us"
-              className="bg-zoho-blue hover:bg-zoho-blue-bright text-white  py-3 px-11.25 tracking-wider rounded-full transition font-noto-sans text-lg"
-            >
-              Contact Now
-            </Link>
-          </div>
+      <section className="py-24">
+        <div className="mx-auto max-w-7xl px-4 space-y-24">
+          {services.map((service, index) => {
+            const Icon = service.icon;
+            const isReversed = index % 2 === 1;
 
-          {/* Resource Augmentation Section */}
-          <div className="bg-zoho-blue-dark  py-12 px-10 md:px-24 text-white overflow-hidden relative mb-18">
-            <div className="relative z-10">
-              <div className="flex flex-col lg:flex-row gap-20">
-                <div className="lg:w-1/2">
-                  <h2 className="text-[32px] font-montserrat mb-6">
-                    Resource Augmentation
-                  </h2>
-                  <p className="text-base font-light opacity-80 leading-relaxed mb-12">
-                    Scale your business with highly skilled professionals
-                    through CloudVandexa’s flexible resource augmentation
-                    services. We provide certified and experienced talent for
-                    short-term projects, long-term engagements, and dedicated
-                    support models.
-                  </p>
-                  <div className="inline-flex flex-col gap-4">
-                    <span className="text- text-sm font-noto-sans font-bold tracking-widest uppercase">
-                      Expertise
-                    </span>
-                    <h3 className="text-xl">
-                      Technologies & Expertise We Provide
-                    </h3>
+            return (
+              <div
+                key={service.title}
+                className={`grid gap-10 lg:grid-cols-2 ${isReversed ? 'lg:grid-flow-col-dense' : ''}`}
+              >
+                <div
+                  className={`space-y-8 ${isReversed ? 'lg:order-last lg:text-right' : ''}`}
+                >
+                  <span className="inline-flex uppercase tracking-[0.35em] text-sm font-semibold text-zoho-blue">
+                    {service.eyebrow}
+                  </span>
+                  <div
+                    className={`flex flex-col gap-5 ${isReversed ? 'lg:items-end' : 'lg:items-start'}`}
+                  >
+                    <div className="flex items-center gap-4">
+                      <div className="flex h-14 w-14 items-center justify-center rounded-3xl bg-zoho-blue/10 text-zoho-blue">
+                        <Icon size={28} />
+                      </div>
+                      <h2 className="text-3xl font-semibold text-slate-900">
+                        {service.title}
+                      </h2>
+                    </div>
+                    <p className="max-w-2xl text-base leading-8 text-slate-600">
+                      {service.description}
+                    </p>
                   </div>
-                </div>
-                <div className="lg:w-1/2">
-                  <div className="grid sm:grid-cols-2 gap-4 ">
-                    {[
-                      'Zoho Expert Team',
-                      'Salesforce Developers',
-                      'Microsoft Dynamics 365',
-                      'SAP Functional Consultants',
-                      'Oracle ERP / CRM',
-                      'ServiceNow Experts',
-                      'Full Stack Developers',
-                      'Cloud Engineers',
-                      'QA & Automation',
-                      'Business Analysts',
-                      'UI/UX Designers',
-                      'DevOps Engineers'
-                    ].map((item, i) => (
+
+                  <div className="grid gap-4 sm:grid-cols-2">
+                    {service.features.map((feature) => (
                       <div
-                        key={i}
-                        className="flex items-center gap-3 bg-white p-4 rounded-lg border border-white/10"
+                        key={feature}
+                        className="flex items-start gap-3 rounded-3xl border border-slate-200/70 bg-white p-5 shadow-sm"
                       >
-                        <ShieldCheck
-                          size={20}
-                          className="text-zoho-blue shrink-0"
+                        <CheckCircle2
+                          size={18}
+                          className="mt-1 text-zoho-blue"
                         />
-                        <span className="font-semibold text-zoho-blue font-noto-sans text-xs opacity-90">
-                          {item}
-                        </span>
+                        <p className="text-sm leading-6 text-slate-700">
+                          {feature}
+                        </p>
                       </div>
                     ))}
                   </div>
+
+                  <Link
+                    to="/contact-us"
+                    className="inline-flex items-center justify-center rounded-full bg-zoho-blue px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-zoho-blue/20 transition hover:bg-zoho-blue-bright"
+                  >
+                    {service.cta}
+                  </Link>
+                </div>
+
+                <div className="overflow-hidden h-[60%] my-auto rounded-[36px] border border-slate-200/70 shadow-[0_24px_80px_rgba(15,23,42,0.08)]">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    loading="lazy"
+                    className="h-full w-full object-cover"
+                  />
                 </div>
               </div>
-            </div>
-            <p className="mt-12 text-sm italic opacity-60">
-              Whether you need one expert or an extended offshore team, we help
-              you reduce hiring timelines, optimize costs, and accelerate
-              project delivery.
-            </p>
-            <div className="absolute top-0 right-0 h-full w-1/3 bg-zoho-blue-bright/10 skew-x-12 translate-x-24"></div>
-          </div>
+            );
+          })}
+        </div>
+      </section>
 
-          {/* Dedicated Support */}
-          <div className="flex flex-col gap-12 items-center">
-            <div className="p-10 md:p-16  flex flex-col items-center text-center">
-              <div className="flex items-center gap-6">
-                <div className="w-12 h-12 bg-zoho-blue text-white rounded-full hidden md:flex items-center justify-center mb-10 shadow-xl shadow-zoho-blue/20">
-                  <HelpCircle size={40} />
-                </div>
-                <h2 className="text-2xl font-light  text-black mb-8">
-                  Dedicated Support & Optimization
-                </h2>
-              </div>
-
-              <p className="text-base max-w-5xl font-light text-black leading-relaxed">
-                Our relationship does not end after implementation. We provide
-                responsive support, ongoing enhancements, user guidance, and
-                performance optimization to ensure your Zoho environment
-                continues to deliver maximum value.
-              </p>
-            </div>
-            <div
-              id="contact-form"
-              className="bg-white p-16 shadow-[0_40px_100px_rgba(0,0,0,0.05)] border border-slate-100 w-[70vw]"
+      <section className="bg-zoho-blue-dark py-24 text-white">
+        <div className="mx-auto max-w-7xl px-4 text-center">
+          <h2 className="text-4xl font-semibold">
+            Not Sure Which Service You Need?
+          </h2>
+          <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-slate-300">
+            Book a free 30-minute call and we’ll help you figure out exactly
+            what your business needs.
+          </p>
+          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <Link to="/contact-us" className="btn btn-white btn-lg">
+              Book Free Call
+            </Link>
+            <a
+              href="https://wa.me/918679390450"
+              target="_blank"
+              rel="noreferrer"
+              className="btn btn-ow btn-lg"
             >
-              <h2 className="text-4xl font-bold text-slate-800 mb-4 text-center">
-                Get in Touch
-              </h2>
-              <p className="text-center text-slate-500 mb-12">
-                Fill out the form below and we'll get back to you shortly.
-              </p>
-
-              <Widget
-                id="ykvKHyYg"
-                style={{ height: 1100, width: '100%' }}
-                className="my-form"
-              />
-            </div>
+              💬 WhatsApp Us
+            </a>
           </div>
         </div>
       </section>

@@ -13,6 +13,8 @@ import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { ContactUsPage } from './pages/ContactUsPage';
 import { ScrollToTop } from './components/ScrollToTop';
+import { NotFound } from './pages/NotFound';
+import { ThankYou } from './pages/ThankYou';
 
 export default function App() {
   return (
@@ -28,6 +30,8 @@ export default function App() {
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
             <Route path="/contact-us" element={<ContactUsPage />} />
+            <Route path="/thank-you" element={<ThankYou />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer />
         </div>

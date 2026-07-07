@@ -26,12 +26,13 @@ export const TopBar = () => {
           >
             <Mail size={13} className="fill-white/20" /> info@cloudvandexa.com
           </a>
-          {/* <a
-            href="tel:+919217757952"
+          <a
+            href="tel:+918679390450"
             className="flex items-center gap-2 hover:opacity-80 transition-opacity pl-6"
           >
-            <Phone size={13} className="fill-white/20" /> 9217757952
-          </a> */}
+            <Phone size={13} className="fill-white/20" />
+            +91 8679 390450
+          </a>
         </div>
         <div className="flex items-center gap-4">
           <Link
@@ -40,6 +41,16 @@ export const TopBar = () => {
           >
             <Linkedin size={14} />
           </Link>
+          <a
+            href="https://wa.me/918679390450"
+            target="_blank"
+            className="cursor-pointer hover:opacity-70 transition-opacity"
+          >
+            <MessageSquare
+              size={14}
+              className="cursor-pointer hover:opacity-70 transition-opacity"
+            />
+          </a>
           {/* <Instagram
             size={14}
             className="cursor-pointer hover:opacity-70 transition-opacity"
