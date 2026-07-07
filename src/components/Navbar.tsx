@@ -193,7 +193,7 @@ export const Navbar = () => {
                       <Mail size={13} className="fill-white/20" />
                     </a>
                     <a
-                      href="tel:+918679390450"
+                      href="tel:+918796390450"
                       className="flex items-center gap-2 hover:opacity-80 transition-opacity"
                     >
                       <Phone size={13} className="fill-white/20" />

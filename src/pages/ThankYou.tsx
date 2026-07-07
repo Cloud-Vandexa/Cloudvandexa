@@ -104,7 +104,7 @@ export const ThankYou = () => {
           <div className="space-y-4">
             {/* WhatsApp */}
             <a
-              href="https://wa.me/918679390450"
+              href="https://wa.me/918796390450"
               target="_blank"
               rel="noreferrer"
               className="flex items-center justify-between p-4 bg-gradient-to-r from-emerald-50 to-emerald-100/50 rounded-lg hover:shadow-md transition-all duration-300 group"
@@ -122,7 +122,7 @@ export const ThankYou = () => {
 
             {/* Phone */}
             <a
-              href="tel:+918679390450"
+              href="tel:+918796390450"
               className="flex items-center justify-between p-4 bg-gradient-to-r from-blue-50 to-blue-100/50 rounded-lg hover:shadow-md transition-all duration-300 group"
             >
               <div className="flex items-center gap-3">

@@ -80,7 +80,7 @@ export const Footer = () => {
                 <Instagram size={18} />
               </a> */}
               <a
-                href="https://wa.me/918679390450"
+                href="https://wa.me/918796390450"
                 target="_blank"
                 rel="noreferrer"
                 className="flex h-11 w-11 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-slate-200 transition hover:bg-white/10"
@@ -158,7 +158,7 @@ export const Footer = () => {
                 </li>
                 <li className="flex items-center gap-3">
                   <Mail className="text-zoho-blue" size={18} />
-                  <span>hello@cloudvandexa.com</span>
+                  <span>info@cloudvandexa.com</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <MessageCircle className="text-zoho-blue" size={18} />

@@ -27,7 +27,7 @@ export const TopBar = () => {
             <Mail size={13} className="fill-white/20" /> info@cloudvandexa.com
           </a>
           <a
-            href="tel:+918679390450"
+            href="tel:+918796390450"
             className="flex items-center gap-2 hover:opacity-80 transition-opacity pl-6"
           >
             <Phone size={13} className="fill-white/20" />
@@ -42,7 +42,7 @@ export const TopBar = () => {
             <Linkedin size={14} />
           </Link>
           <a
-            href="https://wa.me/918679390450"
+            href="https://wa.me/918796390450"
             target="_blank"
             className="cursor-pointer hover:opacity-70 transition-opacity"
           >

@@ -183,7 +183,7 @@ export const ContactUsPage = () => {
 
               <div className="grid gap-4">
                 <a
-                  href="tel:+918679390450"
+                  href="tel:+918796390450"
                   className="group flex items-start gap-4 rounded-3xl border border-slate-200 bg-white p-6 transition hover:border-zoho-blue hover:shadow-lg"
                 >
                   <div className="flex h-14 w-14 items-center justify-center rounded-3xl bg-slate-100 text-2xl">
@@ -199,7 +199,7 @@ export const ContactUsPage = () => {
                   </div>
                 </a>
                 <a
-                  href="mailto:hello@cloudvandexa.com"
+                  href="mailto:info@cloudvandexa.com"
                   className="group flex items-start gap-4 rounded-3xl border border-slate-200 bg-white p-6 transition hover:border-zoho-blue hover:shadow-lg"
                 >
                   <div className="flex h-14 w-14 items-center justify-center rounded-3xl bg-slate-100 text-2xl">
@@ -210,12 +210,12 @@ export const ContactUsPage = () => {
                       Email Us
                     </p>
                     <p className="mt-1 text-sm text-slate-600">
-                      hello@cloudvandexa.com
+                      info@cloudvandexa.com
                     </p>
                   </div>
                 </a>
                 <a
-                  href="https://wa.me/918679390450"
+                  href="https://wa.me/918796390450"
                   target="_blank"
                   rel="noreferrer"
                   className="group flex items-start gap-4 rounded-3xl border border-slate-200 bg-white p-6 transition hover:border-zoho-blue hover:shadow-lg"
@@ -464,7 +464,7 @@ export const ContactUsPage = () => {
                       Our Zoho expert will reach out within 24 business hours.
                     </p>
                     <a
-                      href="https://wa.me/918679390450"
+                      href="https://wa.me/918796390450"
                       target="_blank"
                       rel="noreferrer"
                       className="mt-4 inline-flex items-center justify-center rounded-full bg-zoho-blue px-5 py-2 text-sm font-semibold text-white transition hover:bg-zoho-blue-bright"
@@ -541,7 +541,7 @@ export const ContactUsPage = () => {
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
-              href="https://wa.me/918679390450"
+              href="https://wa.me/918796390450"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-sm font-semibold text-zoho-blue transition hover:bg-slate-100"
@@ -549,7 +549,7 @@ export const ContactUsPage = () => {
               💬 WhatsApp Us Now
             </a>
             <a
-              href="tel:+918679390450"
+              href="tel:+918796390450"
               className="inline-flex items-center justify-center rounded-full border border-white bg-transparent px-8 py-4 text-sm font-semibold text-white transition hover:bg-white/10"
             >
               📞 Call +91 8679 390450

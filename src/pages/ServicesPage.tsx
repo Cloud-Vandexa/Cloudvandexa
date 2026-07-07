@@ -234,7 +234,7 @@ export const ServicesPage = () => {
               Book Free Call
             </Link>
             <a
-              href="https://wa.me/918679390450"
+              href="https://wa.me/918796390450"
               target="_blank"
               rel="noreferrer"
               className="btn btn-ow btn-lg"
