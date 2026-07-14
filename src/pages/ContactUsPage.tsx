@@ -449,7 +449,7 @@ export const ContactUsPage = () => {
                     disabled={isSubmitting}
                     className="inline-flex w-full items-center justify-center rounded-full bg-zoho-blue px-8 py-4 text-sm font-semibold text-white shadow-lg shadow-zoho-blue/20 transition hover:bg-zoho-blue-bright disabled:cursor-not-allowed disabled:opacity-60"
                   >
-                    {isSubmitting ? 'Submitting...' : 'Get in Touch with Us'}
+                    {isSubmitting ? 'Submitting...' : 'Submit'}
                   </button>
 
                   <p className="mt-4 text-sm text-slate-500">
